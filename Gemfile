@@ -64,6 +64,9 @@ gem "sentry-ruby"
 gem "sentry-rails"
 gem "lograge"
 
+# Operational tasks with web UI
+gem "maintenance_tasks"
+
 # Safe database migrations
 gem "strong_migrations"
 

@@ -9,6 +9,7 @@ Rails template project — curated starter with opinionated gem choices.
 - Sorbet + Tapioca + Spoom (gradual typing)
 - ruby-lsp + ruby-lsp-rails (LSP)
 - Sentry (error tracking), Lograge (structured logging)
+- maintenance_tasks (operational tasks with web UI at /maintenance_tasks)
 - anyway_config for configuration
 - prek for git hooks
 

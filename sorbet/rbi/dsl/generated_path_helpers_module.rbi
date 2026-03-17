@@ -10,6 +10,9 @@ module GeneratedPathHelpersModule
   include ::ActionDispatch::Routing::PolymorphicRoutes
 
   sig { params(args: T.untyped).returns(String) }
+  def maintenance_tasks_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def rails_blob_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }

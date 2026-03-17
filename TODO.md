@@ -48,8 +48,9 @@
 - References: https://loggingsucks.com/, https://boristane.com/blog/observability-wide-events-101/
 
 ## Phase 5: DevEX & Operations
-- [ ] `maintenance_tasks` — operational rake tasks with UI
-- [ ] Litestream — SQLite backup/replication (sidecar, not a gem)
+- [x] `maintenance_tasks` — operational tasks with web UI at `/maintenance_tasks`
+- [x] Fix `strong_migrations` auto_analyze for SQLite (not supported)
+- [~] Litestream — infrastructure sidecar (not a gem). 4 SQLite DBs in `storage/` ready for replication. Add to Dockerfile/Kamal when deploying
 
 ## Phase 6: Admin
 - [ ] Document Avo as optional add-on (not included in template)
