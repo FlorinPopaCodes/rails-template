@@ -63,6 +63,13 @@
 - [x] Remove Vite/React tags from `application.html.erb` (non-Inertia layout)
 - [x] Restrict Dependabot to security-only updates, add npm ecosystem
 
+## Security (Pre-Production)
+- [ ] **[HIGH]** Auth gate `/maintenance_tasks` — mounted with no authentication, anyone can run/pause/cancel tasks
+- [ ] **[MEDIUM]** Enable SSL — uncomment `assume_ssl` + `force_ssl` in `production.rb`
+- [ ] **[MEDIUM]** Enable host authorization — uncomment `config.hosts` in `production.rb` (DNS rebinding protection)
+- [ ] Implement authentication (no auth model/routes yet)
+- [ ] Configure SMTP (mailer stubbed with `example.com`)
+
 ## Phase 6: Admin
 - [ ] Document Avo as optional add-on (not included in template)
 
