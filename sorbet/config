@@ -2,4 +2,5 @@
 .
 --ignore=tmp/
 --ignore=vendor/
+--ignore=app/frontend/
 --suppress-payload-superclass-redefinition-for=RDoc::Markup::Heading

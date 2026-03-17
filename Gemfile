@@ -8,8 +8,10 @@ gem "propshaft"
 gem "sqlite3", ">= 2.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
+# Vite.js integration for Rails [https://vite-ruby.netlify.app/]
+gem "vite_rails"
+# Inertia.js adapter for Rails [https://github.com/inertiajs/inertia-rails]
+gem "inertia_rails"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -73,4 +75,6 @@ group :development do
   # LSP for editor [https://shopify.github.io/ruby-lsp/]
   gem "ruby-lsp"
   gem "ruby-lsp-rails"
+
+  gem "foreman"
 end

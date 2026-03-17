@@ -2071,6 +2071,7 @@ class ActionController::Base < ::ActionController::Metal
   include ::ActionController::Rescue
   include ::ActionController::Instrumentation
   include ::ActionController::ParamsWrapper
+  include ::InertiaRails::Controller
   extend ::ActionView::ViewPaths::ClassMethods
   extend ::AbstractController::Helpers::Resolution
   extend ::AbstractController::Helpers::ClassMethods
@@ -2102,7 +2103,7 @@ class ActionController::Base < ::ActionController::Metal
   extend ::ActionController::Rescue::ClassMethods
   extend ::ActionController::Instrumentation::ClassMethods
   extend ::ActionController::ParamsWrapper::ClassMethods
-  extend ::Importmap::Freshness
+  extend ::InertiaRails::Controller::ClassMethods
   extend ::ActionController::Renderers::DeprecatedEscapeJsonResponses
 
   # source://actionpack//lib/action_controller/base.rb#292
@@ -2814,7 +2815,8 @@ end
 
 # source://actionpack//lib/action_controller/base.rb#275
 module ActionController::Base::HelperMethods
-  include ::Importmap::ImportmapTagsHelper
+  include ::InertiaRails::Helper
+  include ::ViteRails::TagHelpers
 
   # source://actionpack//lib/action_controller/base.rb#290
   def alert(*_arg0, **_arg1, &_arg2); end
@@ -10887,6 +10889,9 @@ class ActionDispatch::DebugExceptions
   # source://actionpack//lib/action_dispatch/middleware/debug_exceptions.rb#30
   def call(env); end
 
+  # source://actionpack//lib/action_dispatch/middleware/debug_exceptions.rb#80
+  def render_for_browser_request(request, wrapper, content_type = T.unsafe(nil)); end
+
   private
 
   # @return [Boolean]
@@ -10925,9 +10930,6 @@ class ActionDispatch::DebugExceptions
 
   # source://actionpack//lib/action_dispatch/middleware/debug_exceptions.rb#94
   def render_for_api_request(content_type, wrapper); end
-
-  # source://actionpack//lib/action_dispatch/middleware/debug_exceptions.rb#80
-  def render_for_browser_request(request, wrapper); end
 
   # source://actionpack//lib/action_dispatch/middleware/debug_exceptions.rb#200
   def routes_inspector(exception); end
@@ -11454,7 +11456,7 @@ class ActionDispatch::Flash::FlashHash
   #     flash.keep(:notice)   # keeps only the "notice" entry, the rest of the flash is discarded
   #
   # source://actionpack//lib/action_dispatch/middleware/flash.rb#250
-  def keep(k = T.unsafe(nil)); end
+  def keep(key = T.unsafe(nil)); end
 
   # @return [Boolean]
   #

@@ -36,3 +36,10 @@
 # RSpec status persistence
 spec/examples.txt
 
+
+# Vite Ruby
+/public/vite*
+node_modules
+# Vite local env overrides
+.env*.local
+

@@ -3,7 +3,7 @@ Rails template project — curated starter with opinionated gem choices.
 
 # Tech Stack
 - Ruby 3.3 (via mise), Rails 8.1, SQLite, Puma
-- Inertia.js + React + TypeScript (planned)
+- Inertia.js + React + TypeScript via Vite (bun)
 - RSpec, FactoryBot (planned)
 - Standard + standard-rails + standard-rspec (linting)
 - Sorbet + Tapioca + Spoom (gradual typing)
@@ -12,6 +12,7 @@ Rails template project — curated starter with opinionated gem choices.
 - prek for git hooks
 
 # Commands
+- `mise exec -- bin/dev` — start dev server (Rails + Vite via foreman)
 - `mise exec -- bin/rails <cmd>` — run Rails commands
 - `mise exec -- bundle exec rspec` — run tests
 - `mise exec -- bin/rails console` — Rails console
@@ -20,6 +21,8 @@ Rails template project — curated starter with opinionated gem choices.
 - `mise exec -- bin/tapioca gems` — regenerate gem RBIs
 - `mise exec -- bin/tapioca dsl` — regenerate DSL RBIs
 - `mise exec -- bundle exec spoom coverage` — typing coverage
+- `mise exec -- bun add <pkg>` — add JS dependency
+- `mise exec -- bun add -d <pkg>` — add JS dev dependency
 
 # Conventions
 - See `.claude/rules/` for detailed conventions

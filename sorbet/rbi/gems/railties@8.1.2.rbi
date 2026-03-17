@@ -3076,7 +3076,8 @@ end
 
 # source://railties//lib/rails/mailers_controller.rb#13
 module Rails::MailersController::HelperMethods
-  include ::Importmap::ImportmapTagsHelper
+  include ::InertiaRails::Helper
+  include ::ViteRails::TagHelpers
   include ::ActionController::Base::HelperMethods
 
   # source://railties//lib/rails/mailers_controller.rb#13
