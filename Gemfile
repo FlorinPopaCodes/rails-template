@@ -59,6 +59,11 @@ group :development, :test do
   gem "spoom", require: false
 end
 
+# Observability
+gem "sentry-ruby"
+gem "sentry-rails"
+gem "lograge"
+
 # Safe database migrations
 gem "strong_migrations"
 

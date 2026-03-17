@@ -8,6 +8,7 @@ Rails template project — curated starter with opinionated gem choices.
 - Standard + standard-rails + standard-rspec (linting)
 - Sorbet + Tapioca + Spoom (gradual typing)
 - ruby-lsp + ruby-lsp-rails (LSP)
+- Sentry (error tracking), Lograge (structured logging)
 - anyway_config for configuration
 - prek for git hooks
 

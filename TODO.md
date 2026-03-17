@@ -37,11 +37,15 @@
 - [x] Sorbet config: ignore `app/frontend/`
 
 ## Phase 4: Observability
-- [ ] `sentry-ruby` + `sentry-rails` — error tracking
-- [ ] `lograge` — structured request logging
-- [ ] Axiom — log drain / storage
-- [ ] `health_bit` — health check endpoint (verify returns 200)
-- [ ] Wide events pattern (structured observability)
+- [x] `sentry-ruby` + `sentry-rails` — error tracking (SentryConfig via anyway_config)
+- [x] `lograge` — structured JSON request logging (LogrageConfig via anyway_config)
+- [x] Fix `ENV.fetch` in production.rb → static `:info` (anyway_config compliance)
+- [~] Axiom — infrastructure concern (log drain from STDOUT, not an app gem)
+- [~] `health_bit` — skipped (Rails built-in `/up` sufficient for SQLite-only template)
+
+## Phase 4b: Wide Events (deferred)
+- [ ] Wide events pattern — structured observability via `ActiveSupport::Notifications`
+- References: https://loggingsucks.com/, https://boristane.com/blog/observability-wide-events-101/
 
 ## Phase 5: DevEX & Operations
 - [ ] `maintenance_tasks` — operational rake tasks with UI
