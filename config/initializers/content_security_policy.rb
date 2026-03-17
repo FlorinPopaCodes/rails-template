@@ -9,7 +9,7 @@ Rails.application.configure do
     policy.connect_src :self, :https
 
     if Rails.env.development?
-      policy.script_src(*policy.script_src, :unsafe_eval, "http://#{ViteRuby.config.host_with_port}")
+      policy.script_src(*policy.script_src, :unsafe_eval, :unsafe_inline, "http://#{ViteRuby.config.host_with_port}")
       policy.style_src(*policy.style_src, :unsafe_inline)
       policy.connect_src(*policy.connect_src, "ws://#{ViteRuby.config.host_with_port}")
     end
@@ -18,7 +18,4 @@ Rails.application.configure do
       policy.script_src(*policy.script_src, :blob)
     end
   end
-
-  config.content_security_policy_nonce_generator = ->(request) { request.session.id.to_s }
-  config.content_security_policy_nonce_directives = %w[script-src style-src]
 end
