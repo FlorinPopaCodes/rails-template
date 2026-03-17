@@ -1,0 +1,7 @@
+{
+  "languages": {
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "!solargraph"]
+    }
+  }
+}

@@ -5,14 +5,21 @@ Rails template project — curated starter with opinionated gem choices.
 - Ruby 3.3 (via mise), Rails 8.1, SQLite, Puma
 - Inertia.js + React + TypeScript (planned)
 - RSpec, FactoryBot (planned)
-- Standard (linting, planned)
-- Sorbet + Tapioca (typing, planned)
+- Standard + standard-rails + standard-rspec (linting)
+- Sorbet + Tapioca + Spoom (gradual typing)
+- ruby-lsp + ruby-lsp-rails (LSP)
 - anyway_config for configuration
+- prek for git hooks
 
 # Commands
 - `mise exec -- bin/rails <cmd>` — run Rails commands
 - `mise exec -- bundle exec rspec` — run tests
 - `mise exec -- bin/rails console` — Rails console
+- `mise exec -- bundle exec standardrb` — lint (add `--no-fix` for CI)
+- `mise exec -- bundle exec srb tc` — type check
+- `mise exec -- bin/tapioca gems` — regenerate gem RBIs
+- `mise exec -- bin/tapioca dsl` — regenerate DSL RBIs
+- `mise exec -- bundle exec spoom coverage` — typing coverage
 
 # Conventions
 - See `.claude/rules/` for detailed conventions
@@ -29,3 +36,7 @@ Rails template project — curated starter with opinionated gem choices.
 - RSpec (not Minitest)
 - Request specs for HTTP, model specs for logic
 - System tests excluded by default
+
+# Git Hooks (prek)
+- pre-commit: gitleaks (secret scan), standardrb (lint)
+- pre-push: gitbutler branch block, rspec, sorbet tc
