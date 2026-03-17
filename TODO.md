@@ -52,6 +52,17 @@
 - [x] Fix `strong_migrations` auto_analyze for SQLite (not supported)
 - [~] Litestream — infrastructure sidecar (not a gem). 4 SQLite DBs in `storage/` ready for replication. Add to Dockerfile/Kamal when deploying
 
+## Audit Fixes
+- [x] Add `factory_bot_rails`, `faker`, `test-prof` — testing stack
+- [x] Wire `spec/support/` with FactoryBot config
+- [x] Add RSpec + Sorbet type check CI jobs
+- [x] Fix `actions/checkout@v6` → `@v4` in CI
+- [x] Enable CSP for Vite+React (with dev exceptions)
+- [x] Create `ApplicationForm` + `ApplicationQuery` base classes
+- [x] Fix `config/ci.rb` — replace `bin/importmap audit` with `bun audit`
+- [x] Remove Vite/React tags from `application.html.erb` (non-Inertia layout)
+- [x] Restrict Dependabot to security-only updates, add npm ecosystem
+
 ## Phase 6: Admin
 - [ ] Document Avo as optional add-on (not included in template)
 

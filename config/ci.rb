@@ -6,7 +6,7 @@ CI.run do
   step "Style: Ruby", "bundle exec standardrb --no-fix"
 
   step "Security: Gem audit", "bin/bundler-audit"
-  step "Security: Importmap vulnerability audit", "bin/importmap audit"
+  step "Security: JS vulnerability audit", "bun audit"
   step "Security: Brakeman code analysis", "bin/brakeman --quiet --no-pager --exit-on-warn --exit-on-error"
 
   # Optional: set a green GitHub commit status to unblock PR merge.

@@ -47,6 +47,9 @@ group :development, :test do
   gem "brakeman", require: false
 
   gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
+  gem "test-prof"
 
   # Linting [https://github.com/standardrb/standard]
   gem "standard"

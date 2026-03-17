@@ -4,7 +4,7 @@ Rails template project — curated starter with opinionated gem choices.
 # Tech Stack
 - Ruby 3.3 (via mise), Rails 8.1, SQLite, Puma
 - Inertia.js + React + TypeScript via Vite (bun)
-- RSpec, FactoryBot (planned)
+- RSpec, FactoryBot, Faker, TestProf
 - Standard + standard-rails + standard-rspec (linting)
 - Sorbet + Tapioca + Spoom (gradual typing)
 - ruby-lsp + ruby-lsp-rails (LSP)
