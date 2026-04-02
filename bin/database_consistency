@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative "../config/boot"
+
+load Gem.bin_path("database_consistency", "database_consistency")

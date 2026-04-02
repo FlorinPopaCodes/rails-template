@@ -87,5 +87,8 @@ group :development do
   gem "ruby-lsp"
   gem "ruby-lsp-rails"
 
+  # Checks Rails models against the database schema for inconsistencies.
+  gem "database_consistency", require: false
+
   gem "foreman"
 end

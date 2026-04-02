@@ -14,6 +14,7 @@ Opinionated Rails 8.1 starter. SQLite everywhere, Inertia.js + React + TypeScrip
 | Linting | Standard + standard-rails + standard-rspec |
 | Typing | Sorbet + Tapioca + Spoom |
 | Testing | RSpec, FactoryBot, Faker, TestProf |
+| Database consistency | database_consistency |
 | Observability | Sentry, Lograge (JSON) |
 | Configuration | anyway_config (never raw ENV) |
 | Ops | maintenance_tasks (web UI at `/maintenance_tasks`) |
@@ -42,6 +43,7 @@ bin/rails db:prepare
 bin/dev              # Rails + Vite dev servers (foreman)
 bin/rails console    # Rails console
 bundle exec rspec    # Tests
+bin/database_consistency       # Schema/model consistency checks
 bundle exec standardrb          # Lint
 bundle exec srb tc              # Type check
 bundle exec spoom coverage      # Typing coverage
@@ -64,6 +66,7 @@ GitHub Actions runs on every PR and push to main:
 - **scan_ruby** — Brakeman + bundler-audit
 - **scan_js** — bun audit
 - **lint** — standardrb
+- **consistency** — database_consistency
 - **test** — RSpec
 - **typecheck** — Sorbet
 

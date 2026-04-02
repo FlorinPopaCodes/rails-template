@@ -4,6 +4,7 @@ CI.run do
   step "Setup", "bin/setup --skip-server"
 
   step "Style: Ruby", "bundle exec standardrb --no-fix"
+  step "Schema: Database consistency", "bin/database_consistency"
 
   step "Security: Gem audit", "bin/bundler-audit"
   step "Security: JS vulnerability audit", "bun audit"

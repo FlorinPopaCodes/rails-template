@@ -97,6 +97,8 @@ GEM
     connection_pool (3.0.2)
     crass (1.0.6)
     csv (3.3.5)
+    database_consistency (3.0.2)
+      activerecord (>= 3.2)
     date (3.5.1)
     debug (1.11.1)
       irb (~> 1.10)
@@ -517,6 +519,7 @@ DEPENDENCIES
   bootsnap
   brakeman
   bundler-audit
+  database_consistency
   debug
   factory_bot_rails
   faker
