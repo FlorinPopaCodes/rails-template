@@ -456,7 +456,7 @@ GEM
       thor (>= 1.2.0)
       tsort
       yard-sorbet
-    test-prof (1.5.2)
+    test-prof (1.6.0)
     thor (1.5.0)
     thruster (0.1.19)
     thruster (0.1.19-aarch64-linux)
