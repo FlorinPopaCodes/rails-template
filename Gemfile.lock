@@ -237,7 +237,7 @@ GEM
     psych (5.4.0)
       date
       stringio
-    puma (7.2.0)
+    puma (8.0.2)
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
@@ -488,7 +488,7 @@ GEM
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    yard (0.9.38)
+    yard (0.9.44)
     yard-sorbet (0.9.0)
       sorbet-runtime
       yard
