@@ -1,10 +1,10 @@
 import { createInertiaApp } from "@inertiajs/react"
-import { createElement } from "react"
+import { createElement, type ComponentType } from "react"
 import { createRoot } from "react-dom/client"
 
 createInertiaApp({
   resolve: (name) => {
-    const pages = import.meta.glob("../pages/**/*.tsx", { eager: true })
+    const pages = import.meta.glob<{ default: ComponentType }>("../pages/**/*.tsx", { eager: true })
     const page = pages[`../pages/${name}.tsx`]
     if (!page) throw new Error(`Page not found: ${name}`)
     return page
