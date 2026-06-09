@@ -442,8 +442,8 @@ GEM
       rubocop-rspec (~> 3.9)
       rubocop-rspec_rails (~> 2.31)
     stringio (3.2.0)
-    strong_migrations (2.5.2)
-      activerecord (>= 7.1)
+    strong_migrations (2.8.0)
+      activerecord (>= 7.2)
     tapioca (0.18.0)
       benchmark
       bundler (>= 2.2.25)
