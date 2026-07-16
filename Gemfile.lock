@@ -134,9 +134,7 @@ GEM
       activesupport (>= 6.1)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
-    image_processing (1.14.0)
-      mini_magick (>= 4.9.5, < 6)
-      ruby-vips (>= 2.0.17, < 3)
+    image_processing (2.0.2)
     inertia_rails (3.21.2)
       railties (>= 6)
     io-console (0.8.2)
@@ -185,8 +183,6 @@ GEM
       railties (>= 7.1)
       zeitwerk (>= 2.6.2)
     marcel (1.2.1)
-    mini_magick (5.3.1)
-      logger
     mini_mime (1.1.5)
     minitest (6.0.6)
       drb (~> 2.0)
@@ -514,7 +510,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   foreman
-  image_processing (~> 1.2)
+  image_processing (~> 2.0)
   inertia_rails
   kamal
   lograge
@@ -525,6 +521,7 @@ DEPENDENCIES
   rspec-rails
   ruby-lsp
   ruby-lsp-rails
+  ruby-vips
   sentry-rails
   sentry-ruby
   solid_cable
